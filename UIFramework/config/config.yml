@@ -1,0 +1,8 @@
+#URL: "http://115.29.234.80:8110"  #南宁
+URL: http://www.baidu.com/
+log:
+    file_name: case.log
+    back_count: 5
+    console_output_level: WARNING
+    file_output_level: DEBUG
+    formatter: '%(asctime)s-%(name)s-%(levelname)s-%(message)s'

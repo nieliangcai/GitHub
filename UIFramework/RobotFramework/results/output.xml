@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.3 on win32)" generated="20180622 16:33:06.918">
+<suite id="s1" name="Test Suite" source="D:\UIFramework\RobotFramework\test_suite.txt">
+<test id="s1-t1" name="test01">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://127.0.0.1:5000</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180622 16:33:07.116" level="INFO">Opening browser 'chrome' to base url 'http://127.0.0.1:5000'.</msg>
+<status status="PASS" starttime="20180622 16:33:07.116" endtime="20180622 16:33:14.414"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20180622 16:33:14.414" endtime="20180622 16:33:15.530"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath = //*[text()='登录']</arg>
+</arguments>
+<msg timestamp="20180622 16:33:15.531" level="INFO">Clicking element 'xpath = //*[text()='登录']'.</msg>
+<status status="PASS" starttime="20180622 16:33:15.530" endtime="20180622 16:33:15.731"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180622 16:33:16.733" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20180622 16:33:15.731" endtime="20180622 16:33:16.733"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name = username</arg>
+<arg>123456</arg>
+</arguments>
+<msg timestamp="20180622 16:33:16.734" level="INFO">Typing text '123456' into text field 'name = username'.</msg>
+<status status="PASS" starttime="20180622 16:33:16.733" endtime="20180622 16:33:16.869"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name = password</arg>
+<arg>123456</arg>
+</arguments>
+<msg timestamp="20180622 16:33:16.870" level="INFO">Typing text '123456' into text field 'name = password'.</msg>
+<status status="PASS" starttime="20180622 16:33:16.870" endtime="20180622 16:33:16.983"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath = //*[@type='submit']</arg>
+</arguments>
+<msg timestamp="20180622 16:33:16.983" level="INFO">Clicking button 'xpath = //*[@type='submit']'.</msg>
+<status status="PASS" starttime="20180622 16:33:16.983" endtime="20180622 16:33:17.181"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>xpath = /html/body/p</arg>
+<arg>20</arg>
+<arg>[timeout]</arg>
+</arguments>
+<status status="PASS" starttime="20180622 16:33:17.182" endtime="20180622 16:33:17.214"></status>
+</kw>
+<kw name="Get Title" library="Selenium2Library">
+<doc>Returns the title of current page.</doc>
+<assign>
+<var>${title}</var>
+</assign>
+<msg timestamp="20180622 16:33:17.222" level="INFO">${title} = 练习selenium定位元素页面</msg>
+<status status="PASS" starttime="20180622 16:33:17.215" endtime="20180622 16:33:17.222"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${title}</arg>
+<arg>练习selenium定位元素页面</arg>
+</arguments>
+<status status="PASS" starttime="20180622 16:33:17.222" endtime="20180622 16:33:17.223"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath = /html/body/p</arg>
+</arguments>
+<assign>
+<var>${text}</var>
+</assign>
+<msg timestamp="20180622 16:33:17.269" level="INFO">${text} = welcome123456</msg>
+<status status="PASS" starttime="20180622 16:33:17.223" endtime="20180622 16:33:17.269"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${t ext}</arg>
+<arg>welcome123456</arg>
+</arguments>
+<status status="PASS" starttime="20180622 16:33:17.269" endtime="20180622 16:33:17.270"></status>
+</kw>
+<doc>127.0.0.1:5000测试</doc>
+<status status="PASS" starttime="20180622 16:33:07.115" endtime="20180622 16:33:17.270" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20180622 16:33:06.921" endtime="20180622 16:33:17.271"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Test Suite">Test Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

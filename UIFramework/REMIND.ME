@@ -1,0 +1,22 @@
+CASCO UI自动化项目，基础框架搭建
+    1.配置公共方法：utils
+        1）file_reader：读取Config和Excel中的文件数据
+        2）Config：基础配置信息部分，，URL/Chrome_Type
+        3）log：调用Config中log等，设置log
+        4）HTMLRunner：网上下载开源代码，生成HTML格式的测试报告
+        5）mail：生成报告之后，发送Email到邮箱
+
+    2.test用于执行case
+        1）common通用方法
+        2）page页面元素
+        3）test：测试case
+            3.1）API
+            3.2）UI
+        4）suite：运行配置
+
+    3.config配置Config.YML(ini,XXX)文件用于配置基本信息
+    4.data，Excel写入测试数据
+    5.drivers,ie/chrome的driver phantomJS（无界面浏览器）
+    6.log生成log，保存log    txt文件 可以将日志分类 error和debug...
+    7.Report:生成HTMLReport，通过邮件发送出去
+    8.感觉少了截屏

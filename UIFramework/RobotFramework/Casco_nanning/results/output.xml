@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.3 on win32)" generated="20180627 14:34:52.686">
+<suite id="s1" name="Login" source="D:\UIFramework\RobotFramework\Casco_nanning\login.robot">
+<test id="s1-t1" name="test01">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>http://115.29.234.80:8110/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180627 14:34:53.370" level="INFO">Opening browser 'chrome' to base url 'http://115.29.234.80:8110/'.</msg>
+<status status="PASS" starttime="20180627 14:34:53.370" endtime="20180627 14:35:05.649"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20180627 14:35:05.649" endtime="20180627 14:35:06.786"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtUserName</arg>
+<arg>admin</arg>
+</arguments>
+<msg timestamp="20180627 14:35:06.787" level="INFO">Typing text 'admin' into text field 'id=txtUserName'.</msg>
+<status status="PASS" starttime="20180627 14:35:06.787" endtime="20180627 14:35:06.971"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=txtPassword</arg>
+<arg>CASCO@126</arg>
+</arguments>
+<msg timestamp="20180627 14:35:06.972" level="INFO">Typing text 'CASCO@126' into text field 'id=txtPassword'.</msg>
+<status status="PASS" starttime="20180627 14:35:06.971" endtime="20180627 14:35:07.099"></status>
+</kw>
+<status status="PASS" starttime="20180627 14:34:53.369" endtime="20180627 14:35:07.100" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20180627 14:34:52.688" endtime="20180627 14:35:07.101"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

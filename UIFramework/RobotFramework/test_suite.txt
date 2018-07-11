@@ -1,0 +1,24 @@
+*** Settings ***
+Library  Selenium2Library
+
+*** Test Cases ***
+test01
+    [Documentation]     127.0.0.1:5000测试
+    OPen Browser    http://127.0.0.1:5000    chrome
+    Maximize Browser Window
+    Click Element   xpath = //*[text()='登录']
+    sleep  1
+    Input Text    name = username       123456
+    Input Text    name = password       123456
+
+    #${title_1} Get Title
+    Click Button    xpath = //*[@type='submit']
+    Wait Until Page Contains Element     xpath = /html/body/p       20    [timeout]
+    ${title}        Get Title
+    should contain      ${title}    练习selenium定位元素页面
+    #${title} Get Title
+    ${text}     Get Text        xpath = /html/body/p
+    should contain  ${t ext}    welcome123456
+
+
+   # Close browser

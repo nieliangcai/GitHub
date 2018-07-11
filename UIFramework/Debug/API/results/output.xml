@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.3 on win32)" generated="20180622 15:57:18.943">
+<suite id="s1" name="Test Suite" source="D:\UIFramework\Debug\API\test_suite.txt">
+<test id="s1-t1" name="test01">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://login.taobao.com/member/login.jhtml</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20180622 15:57:19.136" level="INFO">Opening browser 'chrome' to base url 'https://login.taobao.com/member/login.jhtml'.</msg>
+<status status="PASS" starttime="20180622 15:57:19.136" endtime="20180622 15:57:28.411"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>Xpath=//*[@id='J_Quick2Static']</arg>
+</arguments>
+<msg timestamp="20180622 15:57:28.412" level="INFO">Clicking element 'Xpath=//*[@id='J_Quick2Static']'.</msg>
+<status status="PASS" starttime="20180622 15:57:28.411" endtime="20180622 15:57:28.552"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20180622 15:57:29.553" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20180622 15:57:28.552" endtime="20180622 15:57:29.553"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id='TPL_username_1']</arg>
+<arg>123</arg>
+</arguments>
+<msg timestamp="20180622 15:57:29.554" level="INFO">Typing text '123' into text field 'xpath=//*[@id='TPL_username_1']'.</msg>
+<status status="PASS" starttime="20180622 15:57:29.553" endtime="20180622 15:57:29.678"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id='TPL_password_1']</arg>
+<arg>123</arg>
+</arguments>
+<msg timestamp="20180622 15:57:29.678" level="INFO">Typing text '123' into text field 'xpath=//*[@id='TPL_password_1']'.</msg>
+<status status="PASS" starttime="20180622 15:57:29.678" endtime="20180622 15:57:29.843"></status>
+</kw>
+<kw name="Get Title" library="Selenium2Library">
+<doc>Returns the title of current page.</doc>
+<assign>
+<var>${title_1}</var>
+</assign>
+<msg timestamp="20180622 15:57:29.851" level="INFO">${title_1} = 淘宝网 - 淘！我喜欢</msg>
+<status status="PASS" starttime="20180622 15:57:29.844" endtime="20180622 15:57:29.851"></status>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id='J_SubmitStatic']</arg>
+</arguments>
+<msg timestamp="20180622 15:57:29.851" level="INFO">Clicking button 'xpath=//*[@id='J_SubmitStatic']'.</msg>
+<status status="PASS" starttime="20180622 15:57:29.851" endtime="20180622 15:57:35.086"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20180622 15:57:37.087" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20180622 15:57:35.087" endtime="20180622 15:57:37.087"></status>
+</kw>
+<kw name="Get Title" library="Selenium2Library">
+<doc>Returns the title of current page.</doc>
+<assign>
+<var>${title_2}</var>
+</assign>
+<msg timestamp="20180622 15:57:37.094" level="INFO">${title_2} = 淘宝网 - 淘！我喜欢</msg>
+<status status="PASS" starttime="20180622 15:57:37.087" endtime="20180622 15:57:37.094"></status>
+</kw>
+<kw name="Should Not Contain" library="BuiltIn">
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<arguments>
+<arg>${title_2}</arg>
+<arg>${title_1}</arg>
+</arguments>
+<msg timestamp="20180622 15:57:37.095" level="FAIL">'淘宝网 - 淘！我喜欢' contains '淘宝网 - 淘！我喜欢'</msg>
+<status status="FAIL" starttime="20180622 15:57:37.095" endtime="20180622 15:57:37.096"></status>
+</kw>
+<doc>测试淘宝</doc>
+<status status="FAIL" starttime="20180622 15:57:19.135" endtime="20180622 15:57:37.096" critical="yes">'淘宝网 - 淘！我喜欢' contains '淘宝网 - 淘！我喜欢'</status>
+</test>
+<status status="FAIL" starttime="20180622 15:57:18.946" endtime="20180622 15:57:37.098"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Test Suite">Test Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
